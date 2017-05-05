@@ -1,0 +1,6 @@
+use_frameworks!
+target 'Hangman_Tests' do
+  pod 'Hangman', :path => '../'
+  
+  
+end
