@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		4FA0F0001EBCE0A100AB6E55 /* HangmanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA0EFFF1EBCE0A100AB6E55 /* HangmanTests.swift */; };
 		724ED31114CC8EC6C95A5195 /* Pods_Hangman_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC49A632FEB2B008FF547814 /* Pods_Hangman_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E36AE2771279F074E971FAA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		2CFE05F4F5B3D2497AD4BCDA /* Hangman.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Hangman.podspec; path = ../Hangman.podspec; sourceTree = "<group>"; };
+		0E36AE2771279F074E971FAA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2CFE05F4F5B3D2497AD4BCDA /* Hangman.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Hangman.podspec; path = ../Hangman.podspec; sourceTree = "<group>"; };
+		4FA0EFFF1EBCE0A100AB6E55 /* HangmanTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HangmanTests.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Hangman_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hangman_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		71F873085DCA1285DF595A80 /* Pods-Hangman_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hangman_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hangman_Tests/Pods-Hangman_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		8A2015FE586FEA8FC362C673 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8A2015FE586FEA8FC362C673 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E820FB952D8C41DE5EAB1ACF /* Pods-Hangman_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hangman_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hangman_Tests/Pods-Hangman_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC49A632FEB2B008FF547814 /* Pods_Hangman_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hangman_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -57,7 +57,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				4FA0EFFF1EBCE0A100AB6E55 /* HangmanTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -131,12 +131,9 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = B5RPM7SE3L;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -223,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				4FA0F0001EBCE0A100AB6E55 /* HangmanTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E820FB952D8C41DE5EAB1ACF /* Pods-Hangman_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = B5RPM7SE3L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -341,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 71F873085DCA1285DF595A80 /* Pods-Hangman_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = B5RPM7SE3L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
