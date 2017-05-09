@@ -22,7 +22,7 @@ pod "Hangman"
 
 ## Author
 
-45d2c762a7418566c0b028ae9c3b9c7ae6a879a3, pc1992@gmail.com
+Pietro Caselani, pc1992@gmail.com
 
 ## License
 
