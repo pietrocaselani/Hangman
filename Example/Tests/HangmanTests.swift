@@ -173,4 +173,30 @@ class HangmanTests: XCTestCase {
 		XCTAssertFalse(hangman.lost, "Should not lost the game")
 	}
 	
+	func testAttemptsCaseInsesitive() throws {
+		let hangman = Hangman(word: "ftf", attempts: 3)
+		
+		var result = hangman.attempt(letter: "F")
+		
+		XCTAssertTrue(result.valid, "'ft' contains letter 'F'")
+		
+		XCTAssert(result.tried == "F", "Attempt letter should be 'F'")
+		
+		XCTAssert(result.attemptsRemaining == 2, "Attempts remaining should be 2")
+		
+		XCTAssertFalse(result.win, "Should not win")
+		
+		result = hangman.attempt(letter: "t")
+		
+		XCTAssertNotNil(result, "Attempt letter can't return nil")
+		
+		XCTAssertTrue(result.valid, "'ft' contains letter 't'")
+		
+		XCTAssert(result.tried == "t", "Attempt letter should be 't'")
+		
+		XCTAssert(result.attemptsRemaining == 1, "Attempts remaining should be 1")
+		
+		XCTAssertTrue(result.win, "Should win")
+	}
+	
 }
