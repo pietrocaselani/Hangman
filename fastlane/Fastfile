@@ -15,7 +15,6 @@ lane :travis do
 end
 
 lane :push do
-	ensure_git_branch
 	version = version_bump_podspec(path: "Hangman.podspec")
 	git_commit(path: ["./Hangman.podspec", "./Example/Podfile.lock"], message: "#{COMMIT_MESSAGE} #{version}")
 	changelog = changelog_from_git_commits
@@ -29,5 +28,5 @@ lane :push do
 	)
 	sh("git fetch --tags")
 	push_to_git_remote(remote_branch: 'master', force: false, tags: true)
-	pod_push(allow_warnings: true, verbose: true)
+	pod_push(allow_warnings: false, verbose: true)
 end
