@@ -27,11 +27,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 Pods
-Podfile.lock
 .idea
 *.xcworkspace
 *.zip
-fastlane/*.md
 fastlane/*.xml
 fastlane/test_output
 fastlane/downloads

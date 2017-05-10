@@ -1,0 +1,16 @@
+PODS:
+  - Hangman (0.1.0)
+
+DEPENDENCIES:
+  - Hangman (from `../`)
+
+EXTERNAL SOURCES:
+  Hangman:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Hangman: bc1bb1745c55d6fc204f35466103d765e2b350fa
+
+PODFILE CHECKSUM: 9992c5b695d85ac21397584d2ada10b40ee72439
+
+COCOAPODS: 1.1.1
