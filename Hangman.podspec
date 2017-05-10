@@ -3,8 +3,7 @@ Pod::Spec.new do |s|
   s.version          = '1.0.0'
   s.summary          = 'A simple pod library for hangman game'
 
-  s.description      = A simple hangman game library implemented using TDD just to learn more about it, 
-  and also try things like Fastlane, Travis and other stuff that all cool kids are using
+  s.description      = A simple hangman game library implemented using TDD just to learn more about it, and also try things like Fastlane, Travis and other stuff that all cool kids are using
 
   s.homepage         = 'https://github.com/pietrocaselani/Hangman'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

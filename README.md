@@ -1,6 +1,6 @@
 # Hangman
 
-[![CI Status](http://img.shields.io/travis/45d2c762a7418566c0b028ae9c3b9c7ae6a879a3/Hangman.svg?style=flat)](https://travis-ci.org/45d2c762a7418566c0b028ae9c3b9c7ae6a879a3/Hangman)
+[![CI Status](http://img.shields.io/travis/pietrocaselani/Hangman.svg?style=flat)](https://travis-ci.org/pietrocaselani/Hangman)
 [![Version](https://img.shields.io/cocoapods/v/Hangman.svg?style=flat)](http://cocoapods.org/pods/Hangman)
 [![License](https://img.shields.io/cocoapods/l/Hangman.svg?style=flat)](http://cocoapods.org/pods/Hangman)
 [![Platform](https://img.shields.io/cocoapods/p/Hangman.svg?style=flat)](http://cocoapods.org/pods/Hangman)
