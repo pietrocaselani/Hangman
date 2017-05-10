@@ -1,5 +1,5 @@
 PODS:
-  - Hangman (1.0.28)
+  - Hangman (1.0.29)
 
 DEPENDENCIES:
   - Hangman (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Hangman: 9847f27b25ac8e221bc2b338b0ddd9bd126ec016
+  Hangman: 5251319b080b7a8bac98e8580b1c9a59b9532c99
 
 PODFILE CHECKSUM: 9992c5b695d85ac21397584d2ada10b40ee72439
 
