@@ -30,7 +30,9 @@ public final class Hangman {
 		var hits = 0
 		
 		word.characters.enumerated().forEach { index, c in
-			if c == letter {
+			let sameLetter = String(c).caseInsensitiveCompare(String(letter)) == ComparisonResult.orderedSame
+			
+			if sameLetter {
 				hits += 1
 				attemptedLetters[index] = c
 			}
