@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/Hangman.svg?style=flat)](http://cocoapods.org/pods/Hangman)
 [![License](https://img.shields.io/cocoapods/l/Hangman.svg?style=flat)](http://cocoapods.org/pods/Hangman)
 [![Platform](https://img.shields.io/cocoapods/p/Hangman.svg?style=flat)](http://cocoapods.org/pods/Hangman)
+[![codecov](https://codecov.io/gh/pietrocaselani/Hangman/branch/master/graph/badge.svg)](https://codecov.io/gh/pietrocaselani/Hangman)
 
 ## Example
 
