@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Hangman'
-  s.version          = '1.0.32'
+  s.version          = '1.0.33'
   s.summary          = 'A simple pod library for hangman game'
 
   s.description      = 'A simple hangman game library implemented using TDD just to learn more about it, and also try things like Fastlane, Travis and other stuff that all cool kids are using'
