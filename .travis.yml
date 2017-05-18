@@ -12,6 +12,6 @@ before_install:
   - git remote set-url origin "https://${GITHUB_TOKEN}@github.com/pietrocaselani/Hangman.git"
 script:
   - bundle exec fastlane travis
-after_success:
-  - bundle exec fastlane push
-  - bash <(curl -s https://codecov.io/bash)
+# after_success:
+  # - bundle exec fastlane push
+  # - bash <(curl -s https://codecov.io/bash)
