@@ -135,7 +135,6 @@
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = B5RPM7SE3L;
 						LastSwiftMigration = 0820;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};

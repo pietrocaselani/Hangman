@@ -68,7 +68,7 @@ class HangmanTests: XCTestCase {
 		
 		XCTAssertTrue(result.win, "Should win")
 		
-		XCTAssertFalse(hangman.lost, "Should not lost the game")
+		XCTAssertFalse(result.lostGame, "Should not lost the game")
 	}
 	
 	func testAttemptLetterWithDuplicatesAndWin() throws {
@@ -110,7 +110,7 @@ class HangmanTests: XCTestCase {
 		
 		XCTAssertTrue(result.win, "Should win")
 		
-		XCTAssertFalse(hangman.lost, "Should not lost the game")
+		XCTAssertFalse(result.lostGame, "Should not lost the game")
 	}
 	
 	func testAttemptLettersAndLost() {
@@ -140,7 +140,7 @@ class HangmanTests: XCTestCase {
 		
 		XCTAssertFalse(result.win, "Should not win")
 		
-		XCTAssertTrue(hangman.lost, "Should lost the game")
+		XCTAssertTrue(result.lostGame, "Should lost the game")
 	}
 	
 	func testAttemptsWithSameCountOfWord() throws {
@@ -170,7 +170,7 @@ class HangmanTests: XCTestCase {
 		
 		XCTAssertTrue(result.win, "Should win")
 		
-		XCTAssertFalse(hangman.lost, "Should not lost the game")
+		XCTAssertFalse(result.lostGame, "Should not lost the game")
 	}
 	
 	func testAttemptsCaseInsesitive() throws {
@@ -199,4 +199,35 @@ class HangmanTests: XCTestCase {
 		XCTAssertTrue(result.win, "Should win")
 	}
 	
+	func testAttemptWordAndLost() throws {
+		let hangman = Hangman(word: "swift", attempts: 3)
+	
+		let result = hangman.attempt(word: "javac")
+		
+		XCTAssertFalse(result.valid, "'swift' isn't 'javac'")
+		
+		XCTAssert(result.tried == "javac", "Attempt word should be 'javac'")
+		
+		XCTAssert(result.attemptsRemaining == 0, "Attempts remaining should be 0")
+		
+		XCTAssertFalse(result.win, "Should not win")
+		
+		XCTAssertTrue(result.lostGame, "Should lost the game")
+	}
+	
+	func testAttemptWordAndWind() throws {
+		let hangman = Hangman(word: "Kotlin", attempts: 3)
+		
+		let result = hangman.attempt(word: "kotlin")
+		
+		XCTAssertTrue(result.valid, "The word is 'Koltin'")
+		
+		XCTAssert(result.tried == "kotlin", "Attempt word should be 'kotlin'")
+		
+		XCTAssert(result.attemptsRemaining == 0, "Attempts remaining should be 0")
+		
+		XCTAssertTrue(result.win, "Should win")
+		
+		XCTAssertFalse(result.lostGame, "Should not lost the game")
+	}
 }

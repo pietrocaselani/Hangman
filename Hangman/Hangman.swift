@@ -10,7 +10,6 @@ public final class Hangman {
 	
 	public let word: String
 	public let attempts: Int
-	public var lost = false
 	private var attemptsRemaining: Int
 	private var attemptedLetters = [Character]()
 	
@@ -40,9 +39,27 @@ public final class Hangman {
 		
 		let win = attemptedLetters.elementsEqual(word.characters)
 		
-		lost = attemptsRemaining == 0 && !win
+		let lost = attemptsRemaining == 0 && !win
 		
-		return AttemptResult(hits: hits, win: win, tried: String(letter), attemptsRemaining: attemptsRemaining)
+		return AttemptResult(hits: hits, win: win, lostGame: lost, tried: String(letter), attemptsRemaining: attemptsRemaining)
+	}
+	
+	public func attempt(word: String) -> AttemptResult {
+		attemptsRemaining = 0
+		
+		let compareResult = self.word.caseInsensitiveCompare(word)
+		let hits: Int
+		let win: Bool
+		
+		if compareResult == .orderedSame {
+			hits = word.characters.count
+			win = true
+		} else {
+			hits = 0
+			win = false
+		}
+		
+		return AttemptResult(hits: hits, win: win, lostGame: !win, tried: word, attemptsRemaining: attemptsRemaining)
 	}
 	
 }
@@ -51,14 +68,16 @@ public struct AttemptResult {
 	
 	public let valid: Bool
 	public let win: Bool
+	public let lostGame: Bool
 	public let tried: String
 	public let attemptsRemaining: Int
 	public let hits: Int
 	
-	internal init(hits: Int, win: Bool, tried: String, attemptsRemaining: Int) {
+	internal init(hits: Int, win: Bool, lostGame: Bool, tried: String, attemptsRemaining: Int) {
 		self.valid = hits > 0
 		self.hits = hits
 		self.win = win
+		self.lostGame = lostGame
 		self.tried = tried
 		self.attemptsRemaining = attemptsRemaining
 	}
